@@ -17,7 +17,19 @@
   </ion-page>
 </template>
 
-<script setup lang="ts">
+<script>
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
 import ExploreContainer from '@/components/ExploreContainer.vue';
+
+export default {
+  name: 'Tab1Page',
+  components: { 
+    IonHeader, 
+    IonToolbar, 
+    IonTitle, 
+    IonContent, 
+    IonPage,
+    ExploreContainer
+  }
+}
 </script>
