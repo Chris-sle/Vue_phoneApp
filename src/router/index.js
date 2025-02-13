@@ -1,25 +1,23 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
-import TabsPage from '../views/Tab1Page.vue'
+
+import MemoriesPage from '../pages/MemoriesPage.vue';
 
 const routes = [
   {
     path: '/',
-    redirect: '/tabs/tab1'
+    redirect: '/memories'
   },
   {
-    path: '/tabs/',
-    component: TabsPage,
-    children: [
-      {
-        path: '',
-        redirect: '/tabs/tab1'
-      },
-      {
-        path: 'tab1',
-        component: () => import('@/views/Tab1Page.vue')
-      },
-      
-    ]
+    path: '/memories',
+    component: MemoriesPage
+  },
+  {
+    path: '/memories/:id',
+    component: () => import('../pages/MemoryDetailsPage.vue')
+  },
+  {
+    path: '/memories/add',
+    component: () => import('../pages/AddMemoryPage.vue')
   }
 ]
 
