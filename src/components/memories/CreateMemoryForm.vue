@@ -35,9 +35,8 @@ import {
     IonIcon
 } from "@ionic/vue";
 import { camera } from 'ionicons/icons';
-import { Plugins, CameraResultType, CameraSource } from '@capacitor/core';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 
-const { Camera } = Plugins;
 
 export default {
     emits: ["save-memory"],
